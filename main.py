@@ -13,7 +13,7 @@ from view import Not_Found
 
 urls = [ (r'/ip/?', IP_Address),
          (r'/iplist/?', IP_List),
-         (r'/ipset/.*/?', IP_Set),
+         (r'/ipset/(.*)/(.*)/(.*)/?', IP_Set),
          (r'/.*', Not_Found),
 ]
 
