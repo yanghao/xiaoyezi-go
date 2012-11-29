@@ -11,6 +11,8 @@ class IP_List(RequestHandler):
         items.sort()
         text = ''
         for item in items:
+            if item in ['.gitignore', 'README']:
+                continue
             item = os.path.join(ROOT, item)
             if not os.path.isfile(item):
                 return Response("Error ... %s is not a file." % item)
